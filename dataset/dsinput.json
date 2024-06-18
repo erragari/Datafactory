@@ -1,0 +1,40 @@
+{
+	"name": "dsinput",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorageprojectadf",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"par_filename": {
+				"type": "string"
+			},
+			"par_date": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().par_filename",
+					"type": "Expression"
+				},
+				"container": "input"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Industry",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

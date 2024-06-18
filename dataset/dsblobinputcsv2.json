@@ -1,0 +1,36 @@
+{
+	"name": "dsblobinputcsv2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorageprojectadf",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "input"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "CUSTOMER_ID",
+				"type": "String"
+			},
+			{
+				"name": "FULL_NAME",
+				"type": "String"
+			},
+			{
+				"name": "EMAIL_ADDRESS",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

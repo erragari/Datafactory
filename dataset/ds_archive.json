@@ -1,0 +1,27 @@
+{
+	"name": "ds_archive",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorageprojectadf",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": {
+					"value": "@formatDateTime(utcnow(),'yyyy/MM/dd')",
+					"type": "Expression"
+				},
+				"container": "archive"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

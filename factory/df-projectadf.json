@@ -1,0 +1,9 @@
+{
+	"name": "df-projectadf",
+	"location": "australiaeast",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "9ffc1adc-285c-4951-a3fb-9128dba4e028",
+		"tenantId": "c6c5e735-de50-461b-87c1-e1ac20a138ec"
+	}
+}
